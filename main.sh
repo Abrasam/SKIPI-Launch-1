@@ -10,7 +10,7 @@ while true; do
         echo $String
         convert -resize 128x96 "/home/pi/images/unsent/$String" /home/pi/images$
         ./ssdv -e -c SKIPI -i "$ID"  /home/pi/images/temp/temp.jpg output.bin
-        python master.py
+        python sendImage.py
         mv "/home/pi/images/unsent/$String" "/home/pi/images/sent/$String"
         sleep 0.5
 done
